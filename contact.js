@@ -22,6 +22,15 @@ export default class base10 extends Component {
             text: '',
         };
     }
+    constructor() {
+        super();
+        this.state = {
+            name: '',
+            email: '',
+            subject: '',
+            text: '',
+        };
+    }
 
     sendMail(name, email, subject, text) {
         fetch("https://mandrillapp.com/api/1.0/messages/send.json",
